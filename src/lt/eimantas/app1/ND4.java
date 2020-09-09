@@ -25,7 +25,7 @@ public class ND4 {
             System.out.println("Iveskite skaicius:");
             array2[i] = sc.nextInt();
         }
-        System.out.println("Jusu masyvas:");
+        System.out.println("Jusu masyvas (sorted):");
         Arrays.sort(array2);
         for (int i = 0; i < array2.length; i++) {
             System.out.println(array2[i]);
