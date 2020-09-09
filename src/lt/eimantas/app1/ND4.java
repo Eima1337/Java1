@@ -1,5 +1,6 @@
 package lt.eimantas.app1;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.util.stream.IntStream;
 import java.util.Arrays;
@@ -37,6 +38,23 @@ public class ND4 {
         System.out.println("Masyvo suma: " + sum);
         System.out.println("Masyvo vidurkis: " + avg);
 
+        //RIKIAVIMO ALGORITMAS + COUNTERIS
+
+        System.out.println("--------------" + "\n" + "RIKIAVIMAS");
+        int counter = 1;
+        int[] arr = {4, 1, 2};
+        System.out.println(Arrays.toString(arr) + "\n" + "Counteris");
+        for (int k = 0; k < arr.length - 1; k++) {
+            for(int j = 0; j < arr.length - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j + 1];
+                    arr[j + 1] = arr[j];
+                    arr[j] = temp;
+                    System.out.println(counter++);
+                }
+            }
+        }
+        System.out.println("Isrikiuotas masyvas: " + "\n" + Arrays.toString(arr));
     }
 }
 
