@@ -12,6 +12,7 @@ public class ND4 {
         for (int i = 0; i < array1.length; i++) {
             System.out.println(array1[i]);
         }
+        System.out.println(Arrays.toString(array1));
 
 
         Scanner sc = new Scanner(System.in);
@@ -27,6 +28,7 @@ public class ND4 {
         }
         System.out.println("Jusu masyvas (sorted):");
         Arrays.sort(array2);
+        System.out.println(Arrays.toString(array2));
         for (int i = 0; i < array2.length; i++) {
             System.out.println(array2[i]);
         }
