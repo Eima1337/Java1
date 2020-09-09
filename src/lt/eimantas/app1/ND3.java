@@ -40,13 +40,13 @@ public class ND3 {
         System.out.println("-----------");
         ivestis = "";
         char[] charArr;
-        while(!ivestis.equals("q")) {
+        // while(!ivestis.equals("q")) {
             System.out.println("Iveskite teksta:");
             ivestis = sc.nextLine();
             charArr = ivestis.toCharArray();
             for (int i = 0; i < charArr.length; i++) {
                 System.out.println(charArr[i] + " " + (i +1));
-            }
+            // }
         }
     }
 }
