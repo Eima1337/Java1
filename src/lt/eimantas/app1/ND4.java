@@ -41,20 +41,25 @@ public class ND4 {
         //RIKIAVIMO ALGORITMAS + COUNTERIS
 
         System.out.println("--------------" + "\n" + "RIKIAVIMAS");
-        int counter = 1;
-        int[] arr = {4, 1, 2};
+        int counter = 0;
+        int itCounter = 0;
+        int[] arr = {4, 1, 2, 0, 6};
         System.out.println(Arrays.toString(arr) + "\n" + "Counteris");
         for (int k = 0; k < arr.length - 1; k++) {
             for(int j = 0; j < arr.length - 1; j++) {
+                itCounter++;
                 if (arr[j] > arr[j + 1]) {
+                    counter++;
                     int temp = arr[j + 1];
                     arr[j + 1] = arr[j];
                     arr[j] = temp;
-                    System.out.println(counter++);
+
                 }
             }
         }
         System.out.println("Isrikiuotas masyvas: " + "\n" + Arrays.toString(arr));
+        System.out.println("Iteraciju counter " + itCounter);
+        System.out.println("Apkeitimu skaicius " + counter);
     }
 }
 
