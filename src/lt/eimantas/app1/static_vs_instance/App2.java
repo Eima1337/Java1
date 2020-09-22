@@ -12,6 +12,7 @@ public class App2 {
         System.out.println((new NonStaticCalc()).subtract(137, 95));
         System.out.println((new NonStaticCalc()).multiply(22, 30));
         System.out.println((new NonStaticCalc()).divide(99, 33));
+//        System.out.println(NonStaticCalc.add(5, 10)); Ne statinis metodas negali buti nurodomas is statinio konteksto
     }
 }
 class StaticCalc {
