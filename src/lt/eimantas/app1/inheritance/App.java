@@ -37,6 +37,7 @@ class Country {
 }
 
 class Capital {
-    Capital(String name) {}
+    Capital(String name) {
+    }
 
 }
