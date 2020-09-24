@@ -2,7 +2,10 @@ package lt.eimantas.app1._3_comparableandcomparator;
 
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 
+//quick sort, tim sort, merge sort
 public class App {
     public static void main(String[] args) {
         Employee[] employees = {
@@ -13,6 +16,9 @@ public class App {
         };
         System.out.println("Before sorting: " + Arrays.toString(employees));
         Arrays.sort(employees);
+        System.out.println("After sorting: " + Arrays.toString(employees));
+        System.out.println("Before sorting: " + Arrays.toString(employees));
+        Arrays.sort(employees, new EmployeeReverseComparator());
         System.out.println("After sorting: " + Arrays.toString(employees));
     }
 }
@@ -52,5 +58,12 @@ class Employee implements Comparable {
     @Override
     public int compareTo(Object o) {
         return Integer.compare(this.salary, ((Employee)o).salary);
+    }
+}
+
+class EmployeeReverseComparator implements Comparator {
+    @Override
+    public int compare(Object o1, Object o2) {
+        return -1 * Integer.compare(((Employee)o1).getSalary(), ((Employee)o2).getSalary());
     }
 }
